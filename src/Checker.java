@@ -18,8 +18,8 @@ public class Checker {
 
         HashMap<Integer, Double> monthIncome = new HashMap<>();
         HashMap<Integer, Double> monthExpense = new HashMap<>();
-        HashMap<Integer, Double> yearIncome = new HashMap<>();
-        HashMap<Integer, Double> yearExpense = new HashMap<>();
+        HashMap<Integer, Integer> yearIncome = new HashMap<>();
+        HashMap<Integer, Integer> yearExpense = new HashMap<>();
 
         double incomeSumYear = 0;
         double expenseSumYear = 0;
@@ -46,13 +46,11 @@ public class Checker {
         YearlyReport yearlyReport = reportManagerYearly.yearlyReports.get("y.2021.csv");
 
         for (ReportManagerYearly.RecordYear income : yearlyReport.incomes) {
-            incomeSumYear = income.amount;
-            yearIncome.put(income.numMonth, incomeSumYear);
+            yearIncome.put(income.numMonth, income.amount);
         }
 
         for (ReportManagerYearly.RecordYear expense : yearlyReport.expenses) {
-            incomeSumYear = expense.amount;
-            yearExpense.put(expense.numMonth, incomeSumYear);
+            yearExpense.put(expense.numMonth, expense.amount);
         }
 
         for (Integer month : monthIncome.keySet()) {

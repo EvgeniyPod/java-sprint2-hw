@@ -72,7 +72,7 @@ public class Checker {
         }
 
         System.out.println("Все отчёты совпадают.");
-            }
-
         }
+
+    }
 

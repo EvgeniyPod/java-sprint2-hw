@@ -1,6 +1,8 @@
 import java.util.HashMap;
 
-/** Класс для сравнения отчётов за месяцы и годового */
+/**
+ * Класс для сравнения отчётов за месяцы и годового
+ */
 public class Checker {
     public ReportManagerYearly reportManagerYearly;
     public ReportManagerMonthly reportManagerMonthly;
@@ -20,10 +22,6 @@ public class Checker {
         HashMap<Integer, Double> monthExpense = new HashMap<>();
         HashMap<Integer, Integer> yearIncome = new HashMap<>();
         HashMap<Integer, Integer> yearExpense = new HashMap<>();
-
-        double incomeSumYear = 0;
-        double expenseSumYear = 0;
-
 
         for (Integer month : reportManagerMonthly.monthlyReports.keySet()) {
 
@@ -72,7 +70,7 @@ public class Checker {
         }
 
         System.out.println("Все отчёты совпадают.");
-            }
+    }
 
-        }
+}
 

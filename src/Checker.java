@@ -68,9 +68,8 @@ public class Checker {
                 return;
             }
         }
-
+        
         System.out.println("Все отчёты совпадают.");
     }
-
 }
 
